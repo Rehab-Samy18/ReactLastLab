@@ -1,0 +1,15 @@
+#list-style{
+    background-color: rgb(208, 222, 230);
+    padding: 50px;
+    margin: 50px;
+    width: 90%;
+    text-align: center;
+}
+#proddetails{
+    margin-top: 20px;
+    background-color: beige;
+    padding-top: 10px;
+}
+h1{
+    text-align: center;
+}
