@@ -1,5 +1,7 @@
 import React from "react";
-import App from "../App"; 
+import ListComp from './../Components/Routes/ListComp'
+import { Link } from "react-router-dom";
+import AppRouter from './../AppRouter'
 class Login extends React.Component{
     state = {
         AdminData:{
@@ -55,13 +57,13 @@ class Login extends React.Component{
                     name="txtpass" 
                     onChange={this.handlerInput}
                     />
-                    <input type={"submit"} value="Login" className="btn btn-primary" />
+                    <Link to="/list" className="btn btn-outline-success">Login</Link>
                 </form>
                 </>
             )
         }
         else{
-            return <App />
+            return <ListComp />
         }
     }
 }

@@ -20,7 +20,7 @@ const DetailsCompAsFun = (props) => {
                         }}
                 />
             </div>
-            <Link to="/" className="btn btn-outline-success">Back To List</Link>
+            <Link to="/list" className="btn btn-outline-success">Back To List</Link>
         </div>
     )
 }

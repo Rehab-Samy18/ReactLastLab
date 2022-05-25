@@ -39,6 +39,9 @@ class ListComp extends Component{
                                 </td>
                                 <td>
                                     <Link to={{pathname:`/Details/${item.id}`,SelectedObject:item}} className="btn btn-outline-success">Details</Link>
+                                    <Link to={{pathname:`/Edit/${item.id}`,SelectedObject:item}} className="btn btn-outline-success">Edit</Link>
+                                    <Link to='/list' className="btn btn-outline-success">Delete</Link>
+
                                 </td>
                                </tr>
                             })}

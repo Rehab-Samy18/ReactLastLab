@@ -1,14 +1,12 @@
 import { Component } from "react";
-import { Link } from "react-router-dom";
+class EditComp extends Component{
 
-class AddComp extends Component{
     state={
-        _id:'',
-        _name:'',
-        _price:'',
-        _quantity:'',
-        _desc:'',
-        _img:''
+        _id:this.props.location.SelectedObject.id,
+        _name:this.props.location.SelectedObject.name,
+        _price:this.props.location.SelectedObject.price,
+        _quantity:this.props.location.SelectedObject.quantity,
+        _desc:this.props.location.SelectedObject.productDesc,
     };
     handlerInput = (eventObject) => {
         this.setState({
@@ -16,6 +14,7 @@ class AddComp extends Component{
         })
     }
     render(){
+        console.log(this.props)
         return(
             <>
             <span>Product ID</span>
@@ -28,8 +27,8 @@ class AddComp extends Component{
             <input type={"text"} className="form-control" value={this.state._quantity} name="_quantity" onChange={this.handlerInput}/>
             <span>Product Description</span>
             <input type={"text"} className="form-control" value={this.state._desc} name="_desc" onChange={this.handlerInput}/><br></br>
-            <input type={"button"} value="Add" className="btn btn-outline-primary" onClick={()=>{
-                this.props.AddRef({id:this.state._id,name:this.state._name,price:this.state._price,quantity:this.state._quantity,productDesc:this.state._desc,productimg:"logo512.png"})
+            <input type={"button"} value="Edit" className="btn btn-outline-primary" onClick={()=>{
+                this.props.EditRef({id:this.state._id,name:this.state._name,price:this.state._price,quantity:this.state._quantity,productDesc:this.state._desc})
                 this.props.history.push("/list")
                 }} 
             />
@@ -38,4 +37,4 @@ class AddComp extends Component{
     }
 }
 
-export default AddComp;
+export default EditComp;
